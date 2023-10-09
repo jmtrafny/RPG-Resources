@@ -1,0 +1,116 @@
+Prompt: Bonus {} 0
+Prompt: Target {} 8
+
+Table: Main
+Set: roll ={1d6}
+Set: result ={{$roll}+{$prompt1}}
+Set: target ={{$prompt2}-1}
+[when] {$result} > {$target} [do] [@Loot] [else] No find ({$result}), new target: {{$target}-ceil({$roll}/2)} [end]
+
+Table: Loot
+1:Brass baubles, value {ceil({$result}/2)}. 
+2:Copper items, value {ceil({$result}/2)}. 
+3:Silver or gemstones, value {ceil({$result}/2)}. 
+4:Gold items or rare steel, value {ceil({$result}/2)}. 
+5:Wood items or hornblade, value {ceil({$result}/2)}. + [@Consumable]. 
+6:Valuable art, value {ceil({$result}/2)}. + 1 dose of paint, [@Consumable]. 
+7:Rare books, value {ceil({$result}/2)}. + [@{1d6} Consumable]. 
+8:Rare wood, value {ceil({$result}/2)}. + 3 doses of paint, [@{1d6} Consumable]. 
+9:Rare artwork, value {ceil({$result}/2)}. + [@Artifacts]. 
+10:Petrified wood, value {ceil({$result}/2)}. + 6x paint or [@{1d6} Consumable]. 
+11:Legendary art, value {ceil({$result}/2)}. + [@{1d2+1} Artifacts]. 
+12:Petrified wood art, value {ceil({$result}/2)}. + 10x paint or [@{1d6} Consumable]. 
+
+Table: Consumable
+1-2: [@Ampules] 
+3: [@Arrows] 
+4-5: [@Potions] 
+6: [@Miscellany] 
+
+Table: Ampules
+1: Yellow Ampule (Acid),
+2: Turquoise Ampule (Concussive Blast),
+3: Blue Ampule (Lightning),
+4: Yellow-Green Ampule (Fire),
+5: Clear Ampule (Air),
+6: Grey Ampule (Freezing),
+7: Lilac Ampule (Water),
+8: Steel Ampule (Heal),
+9: Burnt Mustard Ampule (Disintegration),
+10: Tree Green Ampule (Instant Wall),
+11: Chocolate Ampule (Stone Trap),
+12: Green Ampule (Tracking),
+
+Table: Arrows
+1: Yellow Arrow (Acid),
+2: Turquoise Arrow (Concussive Blast),
+3: Blue Arrow (Lightning),
+4: Yellow-Green Arrow (Fire),
+5: Clear Arrow (Air),
+6: Grey Arrow (Freezing),
+7: Lilac Arrow (Water),
+8: Steel Arrow (Heal),
+9: Burnt Mustard Arrow (Disintegration),
+10: Tree Green Arrow (Instant Wall),
+11: Chocolate Arrow (Stone Trap),
+12: Green Arrow (Tracking),
+
+Table: Potions
+1: Pale Yellow Potion (Enhanced Hearing),
+2: Bone Potion (Enhanced Touch),
+3: Dark Red Potion (Enhanced Smell),
+4: Powder Blue Potion (Agility),
+5: Bright Yellow Potion (Hair Growth),
+6: Slate Potion (Sanguinity),
+7: Mauve Potion (Stoneskin),
+8: Pale Red Potion (Strength),
+9: Grey-Purple Potion (Curative),
+10: Yellow-Green Potion (Darksight),
+11: Violet Potion (Haste),
+12: Blue Potion (Awareness),
+13: Lime Green Potion (Enhanced Vidion),
+14: Pink Potion (Healing), 
+15: Royal Blue Potion (Perfect Direction), 
+16: Blood Potion (Sustenance), 
+17: Dark Violet Potion (Unconsciousness), 
+18: Moss Green Potion (Vitality),
+
+Table: Miscellany
+1: Implosion pill, 
+2: Climber’s spikes, 
+3: Cloak of fire absorption, 
+4: Instant bandage, 
+5: Ice crystals, 
+6: Skeleton key, 
+7: Blademaster's whetstone, 
+8: Shield Sphere, 
+9: Jar of Wind, 
+10: Eteral Oil, 
+11: Rod of Disruption, 
+12: Map Cloth, 
+
+Table: Artifacts
+1: Chameleon Cloak,
+2: Spectacles of Defense,
+3: Helm of Breathing,
+4: Cloak of Comfort,
+5: Architect's Spectacles,
+6: Helms of Shared Thought,
+7: Major Enchantment Weapon,
+8: Low-Profile Armor,
+9: Pouch of Anything,
+10: Shield Ring,
+11: Painter’s Pot,
+12: Spectacles of Mage Sight,
+13: Advanced Low-Profile Armor,
+14: Mighty Enchantment Weapon,
+15: Memory Skull,
+16: Stoneplanter,
+17: Guardian Ring,
+18: Master Key, 
+19: Instant armor, 
+20: Purification Jar, 
+21: Mysterious Metal Lozenge, 
+22: Extensible Ladder, 
+23: Minor Weapon Enchantment, 
+24: Eternal Brush, 
